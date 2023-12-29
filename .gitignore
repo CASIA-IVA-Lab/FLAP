@@ -1,0 +1,9 @@
+datasets
+llm_weights
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+.idea
+build/
+*.egg-info/
