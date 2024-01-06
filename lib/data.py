@@ -76,10 +76,10 @@ def get_wikitext2(nsamples, seed, seqlen, tokenizer):
         tuple: A tuple containing trainloader (list of input and target pairs) and encoded test dataset.
     """
     # Load train and test datasets
-    # traindata = load_dataset('wikitext', 'wikitext-2-raw-v1', split='train')
-    # testdata = load_dataset('wikitext', 'wikitext-2-raw-v1', split='test')
-    traindata = load_dataset('text', data_files='datasets/wikitext/wiki.train.raw', split="train")
-    testdata = load_dataset('text', data_files='datasets/wikitext/wiki.test.raw', split="train")
+    traindata = load_dataset('wikitext', 'wikitext-2-raw-v1', split='train')
+    testdata = load_dataset('wikitext', 'wikitext-2-raw-v1', split='test')
+    # traindata = load_dataset('text', data_files='datasets/wikitext/wiki.train.raw', split="train")
+    # testdata = load_dataset('text', data_files='datasets/wikitext/wiki.test.raw', split="train")
     
     # Encode datasets
     trainenc = tokenizer(" ".join(traindata['text']), return_tensors='pt')
