@@ -89,7 +89,7 @@ def main():
     print("*"*30)
     sparsity_ratio = check_sparsity(model)
     print(f"sparsity sanity check {sparsity_ratio:.4f}")
-    print(f"model parameter {sum(p.numel() for p in model.parameters()) / 1024 ** 3:.2f}B")
+    print(f"model parameter {sum(p.numel() for p in model.parameters()) / 1000 ** 3:.2f}B")
     print("*"*30)
     # Evaluate the model
     if args.eval:
